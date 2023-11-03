@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 DrawerHeader(
                   child: Image.asset(
-                    '/Users/danil/Desktop/ecommerce_flutter_app/lib/images/33e63d5adb0da6b303a83901c8e8463a.png',
+                    'lib/images/33e63d5adb0da6b303a83901c8e8463a.png',
                     color: Colors.white,
                   ),
                 ),
