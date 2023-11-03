@@ -12,6 +12,15 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
+  void checkOur() {
+    showDialog(
+        context: context,
+        builder: (context) => const AlertDialog(
+              title: Text('Zzz...'),
+              content: Text('Not implemented yet!'),
+            ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(
@@ -33,7 +42,26 @@ class _CartPageState extends State<CartPage> {
                           itemBuilder: (context, index) {
                             Shoe cartItems = value.getUserCart()[index];
                             return CartItem(shoe: cartItems);
-                          }))
+                          })),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  GestureDetector(
+                    onTap: checkOur,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade900,
+                          borderRadius: BorderRadius.circular(12)),
+                      padding: EdgeInsets.all(25),
+                      child: Center(
+                        child: Text(
+                          "CHECK OUT",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ));
