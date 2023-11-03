@@ -9,16 +9,16 @@ class Cart extends ChangeNotifier {
         price: '85',
         imagePath: 'lib/images/nike-air-force-1-07-triple-white-1000x1000.jpg',
         discription:
-            'Introducing the iconic Nike Air Force sneakers, a timeless classic in the world of footwear. These kicks are renowned for their unbeatable combination of style and comfort.'),
+            'Introducing the iconic Nike Air Force sneakers, a timeless classic in the world of footwear.'),
     Shoe(
-        name: 'Nike Air Zoom Vomero',
+        name: 'Nike Air Zoom',
         price: '240',
         imagePath:
             'lib/images/nike-air-zoom-vomero-5-light-iron-ore-1000x1000.jpg',
         discription:
-            'Elevate your running experience with Nike Air Zoom Vomero, the pinnacle of comfort and performance. These high-quality running shoes are engineered to provide exceptional cushioning and support with every stride.'),
+            'Elevate your running experience with Nike Air Zoom Vomero, the pinnacle of comfort and performance.'),
     Shoe(
-        name: 'Nike Dunk Bart Simpson',
+        name: 'Nike Dunk',
         price: '300',
         imagePath: 'lib/images/nike-dunk-low-pro-sb-bart-simpson-1000x1000.jpg',
         discription:

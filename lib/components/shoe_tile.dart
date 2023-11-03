@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class ShoeTile extends StatelessWidget {
   Shoe shoe;
-  ShoeTile({super.key, required this.shoe});
+  void Function()? onTap;
+  ShoeTile({super.key, required this.shoe, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,16 @@ class ShoeTile extends StatelessWidget {
             shoe.imagePath,
           ),
         ),
-        Text(
-          shoe.discription,
-          style: TextStyle(color: Colors.grey.shade600),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Center(
+            child: Text(
+              shoe.discription,
+              style: TextStyle(
+                color: Colors.grey.shade600,
+              ),
+            ),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 25),
@@ -42,17 +50,20 @@ class ShoeTile extends StatelessWidget {
                   Text('\$' + shoe.price, style: TextStyle(color: Colors.grey))
                 ],
               ),
-              Container(
-                  padding: EdgeInsets.all(25),
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(12),
-                          topLeft: Radius.circular(12))),
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ))
+              GestureDetector(
+                onTap: onTap,
+                child: Container(
+                    padding: EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(12),
+                            topLeft: Radius.circular(12))),
+                    child: Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    )),
+              )
             ],
           ),
         )
